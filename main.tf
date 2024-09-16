@@ -126,14 +126,14 @@ resource "aws_autoscaling_group" "bastion" {
   ]
 
   tag {
-        "key"                 = "Name"
-        "value"               = var.name
-        "propagate_at_launch" = true
+    key                 = "Name"
+    value               = var.name
+    propagate_at_launch = true
   }
   tag {
-        "key"                 = "EIP"
-        "value"               = var.eip
-        "propagate_at_launch" = true
+    key                 = "EIP"
+    value               = var.eip
+    propagate_at_launch = true
   }
 
   dynamic "tag" {
